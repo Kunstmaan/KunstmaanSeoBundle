@@ -20,6 +20,13 @@
         "kunstmaan/media-bundle": "2.2.*",
         "kunstmaan/utilities-bundle": "2.2.*"
     },
+    "require-dev": {
+        "doctrine/doctrine-fixtures-bundle": "2.1.*@dev",
+        "stof/doctrine-extensions-bundle": "dev-master",
+        "white-october/pagerfanta-bundle": "dev-master",
+        "pagerfanta/pagerfanta": "dev-master",
+        "friendsofsymfony/user-bundle": "2.0.*@dev"
+    },
     "autoload": {
         "psr-0": { "Kunstmaan\\SeoBundle": "" }
     },
