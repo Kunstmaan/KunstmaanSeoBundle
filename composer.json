@@ -24,5 +24,10 @@
     "autoload": {
         "psr-0": { "Kunstmaan\\SeoBundle": "" }
     },
-    "target-dir": "Kunstmaan/SeoBundle"
+    "target-dir": "Kunstmaan/SeoBundle",
+    "extra": {
+        "branch-alias": {
+            "dev-master": "2.3.x-dev"
+        }
+    }
 }
