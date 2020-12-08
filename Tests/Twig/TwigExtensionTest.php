@@ -8,9 +8,6 @@ use PHPUnit\Framework\TestCase;
 use Psr\Cache\CacheItemInterface;
 use Psr\Cache\CacheItemPoolInterface;
 
-/**
- * Class TwigExtensionTests
- */
 class TwigExtensionTest extends TestCase
 {
     protected $emMock;
@@ -19,18 +16,11 @@ class TwigExtensionTest extends TestCase
 
     protected $seoRepoMock;
 
-    /**
-     * Sets up the fixture, for example, opens a network connection.
-     * This method is called before a test is executed.
-     */
     protected function setUp(): void
     {
         $this->emMock = $this->createMock('\Doctrine\ORM\EntityManager');
     }
 
-    /**
-     * testShouldReturnNameForEntityWhenNoSEO
-     */
     public function testShouldReturnNameForEntityWhenNoSEO()
     {
         $name = 'OK';
@@ -45,9 +35,6 @@ class TwigExtensionTest extends TestCase
         $this->assertEquals($name, $result);
     }
 
-    /**
-     * testShouldReturnNameForEntityWhenSEOWithTitleFound
-     */
     public function testShouldReturnNameForEntityWhenSEOWithTitleFound()
     {
         $nokName = 'NOK';
@@ -126,9 +113,6 @@ class TwigExtensionTest extends TestCase
         $this->entityMock->expects($this->once())->method('getTitle')->willReturn($name);
     }
 
-    /**
-     * NoSeoFound
-     */
     protected function noSeoFound()
     {
         $this->ensureSeoRepoMock();
@@ -139,9 +123,6 @@ class TwigExtensionTest extends TestCase
         $this->wireUpSeoRepo();
     }
 
-    /**
-     * ensureSeoRepoMock
-     */
     protected function ensureSeoRepoMock()
     {
         if (\is_null($this->seoRepoMock)) {
@@ -149,9 +130,6 @@ class TwigExtensionTest extends TestCase
         }
     }
 
-    /**
-     * wireUpSeoRepo
-     */
     protected function wireUpSeoRepo()
     {
         $this->emMock->expects($this->once())
